@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
-import registrationImg from '../assets/registration.png'
+import registrationImg from '../../assets/registration.png'
 
 export default function Auth() {
   const navigate = useNavigate()
