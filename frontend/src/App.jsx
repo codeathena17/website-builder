@@ -1,22 +1,41 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import About from "./components/About"
+import HowItWorks from "./components/HowItWorks"
+import Features from "./components/Features"
+import CTA from "./components/CTA"
+import Footer from "./components/Footer"
+import Auth from "./components/Auth"
+
+
+// Home page component that includes all sections
+const HomePage = () => (
+  <>
+    <Navbar/>
+    <Hero/>
+    <About/>
+    <HowItWorks/>
+    <Features/>
+  
+  
+    <CTA/>
+    <Footer/>
+  </>
+)
 
 function App() {
   return (
-  <div className="text-5xl flex justify-center items-center font-bold text-center h-screen bg-gray-200">Website Builder</div>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<Auth />} />
+         <Route path="/login" element={<Auth />} /> 
+        <Route path="/signup" element={<Auth />} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App
