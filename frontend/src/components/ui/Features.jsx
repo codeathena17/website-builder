@@ -8,8 +8,8 @@ import {
   Command,
   LayoutTemplate
 } from 'lucide-react';
-import download11Img from '../assets/download11_img.png'; 
-import download12Img from '../assets/download12_img.png';
+import download11Img from '../../assets/download11_img.png'; 
+import download12Img from '../../assets/download12_img.png';
 
 const Features = () => {
   return (
